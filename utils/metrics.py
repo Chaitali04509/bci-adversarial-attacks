@@ -128,7 +128,7 @@ def summarize_results(
         if mle_vals and dmle_vals:
             summary[f"final_{metric}_improvement"] = dmle_vals[-1] - mle_vals[-1]
             # Area under curve (higher = better across all cycles)
-            summary[f"auc_{metric}_mle"] = np.trapz(mle_vals)
-            summary[f"auc_{metric}_dmle"] = np.trapz(dmle_vals)
+            summary[f"auc_{metric}_mle"] = np.trapezoid(mle_vals)
+            summary[f"auc_{metric}_dmle"] = np.trapezoid(dmle_vals)
 
     return summary

@@ -1,0 +1,5 @@
+*.npy
+*.pyc
+__pycache__/
+fix_and_rerun.py
+.DS_Store
