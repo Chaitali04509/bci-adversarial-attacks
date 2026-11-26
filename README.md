@@ -1,4 +1,4 @@
-# Query-Efficient Black-Box Adversarial Attacks on EEG-Based BCIs via Dependency-Aware Active Learning
+# Black-Box Adversarial Attacks on EEG-Based BCIs: Evaluating Dependency-Aware vs. Standard Active Learning
 
 ## Authors
 - Alexandros Kerwick
@@ -11,7 +11,9 @@ Northeastern University — Electrical and Computer Engineering
 
 ## Overview
 
-This project implements black-box adversarial attacks on EEG-based Brain-Computer Interfaces (BCIs), comparing conventional active learning (MLE) with Dependency-Aware Maximum Likelihood Estimation (DMLE) for substitute model training. The goal is to show that DMLE enables more query-efficient attacks by properly modeling sample dependencies in active learning.
+This project implements black-box adversarial attacks on EEG-based Brain-Computer Interfaces (BCIs), comparing conventional active learning (MLE) with Dependency-Aware Maximum Likelihood Estimation (DMLE) for substitute model training. The goal is to test whether DMLE, by modeling the sample dependencies that active learning introduces, enables more query-efficient attacks than standard MLE.
+
+**Current findings (synthetic data, 1 run, ~1,200 queries):** the MLE-trained substitute reached 86.6% accuracy and 100% PGD transfer attack success, while the DMLE-trained substitute reached 41.8% accuracy and ~77% PGD success. In this setup, DMLE did not improve query efficiency over standard MLE.
 
 ## Project Structure
 
